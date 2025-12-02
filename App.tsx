@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { createRoot } from 'react-dom/client';
-import { ProductionData, AppStep, INITIAL_DATA, AppState } from './types';
+import { ProductionData, AppStep, INITIAL_DATA } from './types';
 import { StepIndicator } from './components/StepIndicator';
 import { Step1Setup } from './components/Step1Setup';
 import { Step2Order } from './components/Step2Order';
