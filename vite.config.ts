@@ -1,13 +1,22 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
+// O nome do repositório DEVE ser o mesmo usado no GitHub Pages
+// Altere 'registro-producao' se o nome do seu repositório for diferente.
+const repoName = 'teste-apontamento-online2'; 
+
+// Define a base path:
+// Se estiver em produção (após o build), usa /<repoName>/ (necessário para GH Pages)
+// Caso contrário, usa / (para desenvolvimento local)
+const base = process.env.NODE_ENV === 'production' ? `/${repoName}/` : '/';
+
 export default defineConfig({
   plugins: [react()],
-  base: './', // CRÍTICO: Isso garante que o app funcione em subpastas (como no GitHub Pages)
+  // Define o caminho base para carregar corretamente os assets
+  base: base,
   build: {
+    // Garante que o output seja colocado na pasta 'dist'
     outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false
-  }
+    sourcemap: false,
+  },
 });
