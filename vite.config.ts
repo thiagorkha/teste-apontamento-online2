@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// O nome do repositório DEVE ser o mesmo usado no GitHub Pages
+// O nome do repositório DEVE ser o mesmo usado no GitHub Pages...
 // Altere 'registro-producao' se o nome do seu repositório for diferente.
 const repoName = 'teste-apontamento-online2'; 
 
